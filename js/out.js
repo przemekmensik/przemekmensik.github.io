@@ -9804,9 +9804,9 @@ var WeatherApp = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (WeatherApp.__proto__ || Object.getPrototypeOf(WeatherApp)).call(this, props));
 
     _this.state = {
-      //  url:`http://api.wunderground.com/api/${api.key}/conditions/lang:PL/q/warsaw,pl.json`,
-      //  url:`http://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
-      url: 'http://api.wunderground.com/api/' + _api2.default.key + '/geolookup/conditions/forecast/q/Poland/Warsaw.json',
+      //  url:`https://api.wunderground.com/api/${api.key}/conditions/lang:PL/q/warsaw,pl.json`,
+      //  url:`https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
+      url: 'https://api.wunderground.com/api/' + _api2.default.key + '/geolookup/conditions/forecast/lang:PL/q/Poland/Warsaw.json',
       inputValue: '',
       unitValue: 'C'
     };
@@ -9873,7 +9873,7 @@ var WeatherApp = function (_React$Component) {
         var _this2 = this;
 
         this.setState({
-          url: 'http://api.wunderground.com/api/' + _api2.default.key + '/geolookup/conditions/forecast/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json\''
+          url: 'https://api.wunderground.com/api/' + _api2.default.key + '/geolookup/conditions/forecast/lang:PL/q/' + position.coords.latitude + ',' + position.coords.longitude + '.json\''
         }, function () {
           _this2.getData();
         });
@@ -9893,7 +9893,7 @@ var WeatherApp = function (_React$Component) {
 
       e.preventDefault();
       this.setState({
-        url: 'http://api.wunderground.com/api/' + _api2.default.key + '/geolookup/conditions/forecast/q/' + this.state.inputValue + '.json'
+        url: 'https://api.wunderground.com/api/' + _api2.default.key + '/geolookup/conditions/forecast/lang:PL/q/' + this.state.inputValue + '.json'
       }, function () {
         _this3.getData();
       });
