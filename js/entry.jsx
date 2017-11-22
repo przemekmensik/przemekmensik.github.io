@@ -16,7 +16,7 @@ class WeatherApp extends React.Component {
     this.state = {
     //  url:`http://api.wunderground.com/api/${api.key}/conditions/lang:PL/q/warsaw,pl.json`,
     //  url:`http://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
-      url:`http://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
+      url:`https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
       inputValue: '',
       unitValue: 'C',
     }
@@ -75,7 +75,7 @@ class WeatherApp extends React.Component {
     this.getData();
     navigator.geolocation.getCurrentPosition(function(position) {
       this.setState({
-        url: `http://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/${position.coords.latitude},${position.coords.longitude}.json'`
+        url: `https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/${position.coords.latitude},${position.coords.longitude}.json'`
       }, () => {
         this.getData();
       });
@@ -90,7 +90,7 @@ class WeatherApp extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState({
-      url: `http://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/${this.state.inputValue}.json`,
+      url: `https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/${this.state.inputValue}.json`,
     }, () => {
       this.getData();
     });
