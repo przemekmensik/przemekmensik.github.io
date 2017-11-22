@@ -14,8 +14,8 @@ class WeatherApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    //  url:`http://api.wunderground.com/api/${api.key}/conditions/lang:PL/q/warsaw,pl.json`,
-    //  url:`http://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
+    //  url:`https://api.wunderground.com/api/${api.key}/conditions/lang:PL/q/warsaw,pl.json`,
+    //  url:`https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
       url:`https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/q/Poland/Warsaw.json`,
       inputValue: '',
       unitValue: 'C',
