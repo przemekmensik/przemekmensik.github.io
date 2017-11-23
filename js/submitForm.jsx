@@ -8,7 +8,7 @@ function SubmitForm(props) {
         value={props.inputValue}
         onChange={props.change}
         className="form-control mb-4 mb-sm-0"
-        type="text" placeholder="City, State or zipcode">
+        type="text" placeholder="Podaj miasto i województwo">
       </input>
       <button type="submit" className="myButton submitButton">SZUKAJ</button>
 
