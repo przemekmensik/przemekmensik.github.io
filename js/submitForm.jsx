@@ -10,7 +10,7 @@ function SubmitForm(props) {
         className="form-control mb-4 mb-sm-0"
         type="text" placeholder="City, State or zipcode">
       </input>
-      <button type="submit" className="myButton submitButton">Submit</button>
+      <button type="submit" className="myButton submitButton">SZUKAJ</button>
 
     </form>
   );

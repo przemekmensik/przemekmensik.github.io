@@ -34,10 +34,10 @@ const AppDetails = (props) => {
 
       <div className="col-4 col-md-5">
         <div className="small-font">
-          <p>Humidity: <b>{props.humidity}</b></p>
-          <p>Wind: <b>{props.windMPH} km/h</b></p>
-          <p>Precipitation: <b>{props.precipitation} mm</b></p>
-          <p>Weather: <b>{props.weather}</b></p>
+          <p>Wilgotność: <b>{props.humidity}</b></p>
+          <p>Wiatr: <b>{props.windMPH} km/h</b></p>
+          <p>Opady: <b>{props.precipitation} mm</b></p>
+          <p>Pogoda: <b>{props.weather}</b></p>
         </div>
       </div>
     </div>
