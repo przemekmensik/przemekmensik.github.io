@@ -128,11 +128,12 @@ img {
 }
 
 .col-5 {
-  height: 45vh;
+  height: 40vh;
   display:flex;
   align-items: center;
   //justify-content: center;
   flex-direction: column;
+  border: 3px solid red;
 }
 .submitForm {
 //  margin: 0 auto;
@@ -324,7 +325,7 @@ input [type=submit] {
   }
 }
 .big-font{
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: white;
   display: flex;
   align-items: center;
@@ -355,6 +356,14 @@ p {
           font-size: 1.5rem;
 }
 
+@media only screen and (max-width: 768px) {
+
+  .col-5 {
+    background-color: rgb(165, 238, 36);
+    border: 3px solid green;
+
+  }
+}
 
 }
 .col-1 {
@@ -443,27 +452,6 @@ p {
   }
 }
 
-#sun, #sun3 { 	position: relative;
- display: block;
-margin: 0 auto;
-
--webkit-animation: rotation 30s infinite linear; }
- @-webkit-keyframes rotation {
-   from {
-       -webkit-transform: rotate(0deg);
-   }
-   to {
-       -webkit-transform: rotate(359deg);
-   }
-}
-
-#sun3 {
-   display: block;
-   z-index: -1;
-   margin: 0 auto;
-   width:100%;
-   height: auto;
-}
 .btn-group {
   vertical-align: top;
 }

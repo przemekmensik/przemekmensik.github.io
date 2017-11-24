@@ -19,7 +19,8 @@
   "dependencies": {
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "weather-underground-icons": "^1.0.0"
+    "weather-underground-icons": "^1.0.0",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

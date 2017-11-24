@@ -67,7 +67,7 @@ class WeatherApp extends React.Component {
      });
    }.bind(this)).catch(function(error) {
      this.setState({
-       errorMsg: 'Proszę wpisać miasto i województwo.'
+       errorMsg: 'Proszę w.'
      });
    }.bind(this));
  }
