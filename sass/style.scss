@@ -1,6 +1,13 @@
 @import '_mixins.scss';
 @import "partials/_variables.scss";
 
+
+
+
+html { font-size: 1em; }
+
+
+
 body {
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87c8fd+0,53adf1+40,057ee1+100 */
@@ -128,13 +135,15 @@ img {
 }
 
 .col-5 {
-  height: 40vh;
+  height: auto;
+  max-height: 60vh;
   display:flex;
   align-items: center;
-  //justify-content: center;
-  flex-direction: column;
-  border: 3px solid red;
+  justify-content: center;
+  flex-direction: row;
+  left: 140px;
 }
+
 .submitForm {
 //  margin: 0 auto;
  display: flex;
@@ -160,12 +169,12 @@ input[type=text] {
     border-color: transparent;
     border-radius: 25px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     //margin-right: 50px;
     padding: 15px;
     text-align: center;
     //width: 100%;
-    max-width: 45vw;
+    max-width: 60vw;
 }
 
 input[type=text]:focus {
@@ -197,17 +206,19 @@ input [type=submit] {
 
 .btn {
   display: flex;
+  width: 200px;
   flex-wrap: wrap;
   align-items: center;
-  background-color: rgb(107, 229, 237);
+  background-color: none;
   color: white;
   cursor: pointer;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-top: 30px;
   border-radius: 10px;
-  font-size: 1rem;
+  border: 10x solid red;
+  font-size: 1em;
 
 }
 
@@ -265,6 +276,7 @@ input [type=submit] {
     -webkit-border-radius: 25;
     -moz-border-radius: 25;
     border-radius: 25px;
+    border: none;
     font-family: sans-serif;
     color: #ffffff;
     font-size: 20px;
@@ -313,19 +325,24 @@ input [type=submit] {
 }
 .mt-2 {
   display: flex;
-  flex-direction: column;
+  //flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  height:auto;
+  //max-width: 40vw;
   p{
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 }
 .small-font{
   p{
-    font-size: 1.5rem;
+    font-size: 1.5em;
   }
 }
 .big-font{
-  font-size: 3.5rem;
+  font-size: 3.5em;
   color: white;
   display: flex;
   align-items: center;
@@ -348,12 +365,12 @@ p {
   align-items: center;
         p {
           text-align: center;
-          font-size: 2.5rem;
+          font-size: 2.5em;
           color: white;
         }
         p:nth-child(2) {
           color: rgb(223, 176, 9);
-          font-size: 1.5rem;
+          font-size: 1.5em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -368,15 +385,16 @@ p {
 }
 .col-1 {
   display: block;
-//  flex-wrap: wrap;
-//  justify-content: center;
-//  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   p {
     margin-top: 10px;
   }
 }
 .col-12 {
   background-color: none;
+  margin-top: 5%
 }
 .temp{
   display: flex;
@@ -384,7 +402,7 @@ p {
   p {
     display: inline-block;
     color: white;
-    font-size: 4.5rem;
+    font-size: 4.5em;
     text-align: center;
   }
   .verticalLine {
@@ -460,12 +478,19 @@ p {
 }
 .text-primary .text-center .mt-2 {
   p {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     color:red;
+    margin: 0 auto;
   }
 }
 h3{
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: white;
   margin-bottom: 10px;
+}
+
+
+
+@media screen and (max-width: 500px) {
+  html { font-size: 0.75em; }
 }

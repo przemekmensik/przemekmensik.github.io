@@ -17,7 +17,9 @@
   },
   "homepage": "",
   "dependencies": {
+    "bootstrap-toggle": "^2.2.2",
     "react": "^15.6.2",
+    "react-bootstrap-toggle": "^2.2.3",
     "react-dom": "^15.6.2",
     "weather-underground-icons": "^1.0.0",
     "whatwg-fetch": "^2.0.3"

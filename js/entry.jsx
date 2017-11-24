@@ -9,6 +9,9 @@ import SecondForecast from './SecondForecast.jsx'
 import ThirdForecast from './ThirdForecast.jsx';
 import api from '../api.json';
 import 'whatwg-fetch';
+import Toggle from 'react-bootstrap-toggle';
+
+
 
 
 
@@ -21,11 +24,14 @@ class WeatherApp extends React.Component {
       url:`https://api.wunderground.com/api/${api.key}/geolookup/conditions/forecast/lang:PL/q/Poland/Warsaw.json`,
       inputValue: '',
       unitValue: 'C',
+      toggleActive: false,
     }
     this.getData = this.getData.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     //this.handleClick = this.handleClick.bind(this);
+    this.onToggle = this.onToggle.bind(this);
+
   }
   getData() {
     let url = this.state.url;
@@ -69,7 +75,7 @@ class WeatherApp extends React.Component {
      });
    }.bind(this)).catch(function(error) {
      this.setState({
-       errorMsg: 'Proszę w.'
+       errorMsg: 'Proszę wpisać miasto i województwo.'
      });
    }.bind(this));
  }
@@ -102,8 +108,10 @@ class WeatherApp extends React.Component {
     this.setState({
       unitValue: e.target.id,
     });
+  }
 
-
+  onToggle() {
+    this.setState({ toggleActive: !this.state.toggleActive });
   }
 
   render() {
@@ -126,11 +134,17 @@ class WeatherApp extends React.Component {
 
 
               </div>
-              <div className="col-5 content">
-
-                <AppDetails {...this.state} handleClick={(e) => this.handleClick(e)}/>
-
-
+                <div className="col-5 content">
+                  <p>Kliknij by <br></br>zmnienić</p>
+                  <Toggle
+                          onClick={this.onToggle}
+                          on={<div className="col-4 col-md-4"><h1 className="big-font">{this.state.tempC}<span className="units">&deg; C</span></h1></div>}
+                          off={<div className="col-4 col-md-4"><h1 className="big-font">{this.state.tempF}<span className="units">&deg; F</span></h1></div>}
+                          size="xs"
+                          offstyle="danger"
+                          active={this.state.toggleActive}
+                        />
+                  <AppDetails {...this.state} />
                 </div>
             </div>
 
