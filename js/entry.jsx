@@ -6,8 +6,10 @@ import UnitSwitch from './unitButton.jsx';
 import AppDetails from './AppDetails.jsx';
 import DailyForecast from './AppDetails1.jsx';
 import SecondForecast from './SecondForecast.jsx'
-import ThirdForecast from './ThirdForecast.jsx'
+import ThirdForecast from './ThirdForecast.jsx';
 import api from '../api.json';
+import 'whatwg-fetch';
+
 
 
 class WeatherApp extends React.Component {
