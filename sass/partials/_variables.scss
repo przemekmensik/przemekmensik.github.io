@@ -3,4 +3,7 @@ $containerFullWidth: 100%;
 $containerWidth: 1200px;
 
 $columnWidth: $containerFullWidth/$columns;
-body { background: url('../images/bckg.jpg'); }
+body { background: url('../images/bckg.jpg');
+       background-repeat: no-repeat;
+       background-position:left;
+     }

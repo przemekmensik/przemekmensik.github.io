@@ -5,24 +5,11 @@
 
 
 
-html { font-size: 1em; }
-
-
-
+html { font-size: 1em;
+  body { height: 100%;
+       }
+     }
 body {
-
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#87c8fd+0,53adf1+40,057ee1+100 */
-//  background: #87c8fd;
-  /* Old browsers */
-//  background: -moz-radial-gradient(center, ellipse cover, #87c8fd 0%, #53adf1 40%, #057ee1 100%);
-  /* FF3.6-15 */
-//  background: -webkit-radial-gradient(center, ellipse cover, #87c8fd 0%, #53adf1 40%, #057ee1 100%);
-  /* Chrome10-25,Safari5.1-6 */
-//  background: radial-gradient(ellipse at center, #87c8fd 0%, #53adf1 40%, #057ee1 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87c8fd', endColorstr='#057ee1',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
-//  background-image:url(/images/bckg_blurred.jpg);
   background-repeat:no-repeat;
   height: 100vh;
   font-family: sans-serif;
@@ -135,7 +122,7 @@ img {
     padding: 0.5em;
     width: 100%;
     min-height: 1px;
-    //border: 1px solid red;
+    border: 1px solid red;
 }
 
 .col-5 {
@@ -146,6 +133,11 @@ img {
   justify-content: center;
   flex-direction: row;
   left: 140px;
+}
+.col-3 {
+  height: 100%;
+  max-height: 30vh;
+  margin-top: 3vh;
 }
 
 .submitForm {
@@ -168,17 +160,17 @@ input[type=text] {
     //float: right;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transition: width 0.8s ease-in-out;
-    transition: width 0.8s ease-in-out;
+    -webkit-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
     border-color: transparent;
     border-radius: 25px;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.2em;
     //margin-right: 50px;
     padding: 15px;
     text-align: center;
-    //width: 100%;
-    max-width: 60vw;
+    width: 40vw;
+    max-width: 65vw;
 }
 
 input[type=text]:focus {
@@ -194,18 +186,22 @@ input [type=submit] {
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: white;
   text-align: center;
+  font-size: 1em;
 }
 ::-moz-placeholder { /* Firefox 19+ */
   color: white;
   text-align: center;
+  font-size: 1em;
 }
 :-ms-input-placeholder { /* IE 10+ */
   color: white;
   text-align: center;
+  font-size: 1em;
 }
 :-moz-placeholder { /* Firefox 18- */
   color: white;
   text-align: center;
+  font-size: 1em;
 }
 
 .btn {
@@ -227,50 +223,6 @@ input [type=submit] {
 }
 
 .myButton {
-  /*
-	-moz-box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	box-shadow:inset 0px 1px 0px 0px #dcecfb;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
-	background:-moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:-ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
-	background:linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
-	background-color:#bddbfa;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #84bbf3;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #528ecc;
-
-  &:hover {
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
-  	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-  	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-  	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-  	background:-ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
-  	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
-  	background-color:#80b5ea;
-  }
-
-  &:active {
-    position:relative;
-  	top:1px;
-  }
-  */
-
-
     background: #a512b5;
     background-image: -webkit-linear-gradient(top, #a512b5, #2980b9);
     background-image: -moz-linear-gradient(top, #a512b5, #2980b9);
@@ -375,9 +327,7 @@ p {
         p:nth-child(2) {
           color: rgb(223, 176, 9);
           font-size: 1.5em;
-}
-
-
+        }
 }
 .col-1 {
   display: block;
@@ -462,7 +412,6 @@ p {
     height: 50%;
     width: 50%;
     max-width: 50%;
-
   }
 }
 
@@ -590,7 +539,7 @@ label.checkbox.inline .toggle {
 
 
 @media screen and (max-width: 500px) {
-  html { font-size: 0.75em; }
+  html { font-size: 0.65em; }
   .container {
     width: 100%;
     max-width: 100vw;
