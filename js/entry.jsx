@@ -119,21 +119,16 @@ class WeatherApp extends React.Component {
         <div>
           <section className="wrapper">
             <div className="container">
-
-
-            <div className="row">
-              <div className="col-1 content">
-
-                <SubmitForm {...this.state.location}
+              <div className="row">
+                <div className="col-1 content">
+                  <SubmitForm {...this.state.location}
                             change={this.handleChange}
                             submit={this.handleSubmit}
-                />
+                  />
                 <div>
                   <p className="text-primary text-center mt-2">{this.state.errorMsg}</p>
-                </div>
-
-
               </div>
+            </div>
                 <div className="col-5 content">
                   <p>Kliknij by <br></br>zmnienić</p>
                   <Toggle
@@ -151,37 +146,27 @@ class WeatherApp extends React.Component {
             <div className="row">
               <div className="col-3">
                 <div className="row">
-                { /*
-                  <div className="col-3 temp">
-                    {/*<UnitSwitch handleClick={(e) => this.handleClick(e)}/>
-                  </div>/*}
-                  {/*<div className="col-6">
-                    <p>Clear.Chilly</p>
-                    <p>dzien tygodnia data godzina</p>
-                  </div>
-                  */}
-
                   <div className="col-12">
                     <div className="row">
                       <div className="col-2">
                         <div className="firstDay">
                           <DailyForecast {...this.state }/>
-                        </div>
-                        <div className="secondDay">
-                          <SecondForecast {...this.state }/>
-                        </div>
-                        <div className="thirdDay">
-                          <ThirdForecast {...this.state} />
+                            </div>
+                              <div className="secondDay">
+                                <SecondForecast {...this.state }/>
+                              </div>
+                            <div className="thirdDay">
+                              <ThirdForecast {...this.state} />
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <p>Powered by:</p>
                 <div className="WUlogo">
-                  <a href="https://www.wunderground.com/">
-                    <img src="images/wundergroundLogo_4c_rev_horz.png" ></img>
-                  </a>
+                      <p>Powered by:</p>
+                      <a href="https://www.wunderground.com/">
+                        <img src="images/wundergroundLogo_4c_rev_horz.png" ></img>
+                      </a>
                 </div>
               </div>
             </div>

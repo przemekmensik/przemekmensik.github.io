@@ -119,6 +119,9 @@ img {
   max-width: 100%;
   margin: 0 auto;
   color: white;
+  p{
+    left:50px
+  }
   img {
     display: block;
     max-height: 5vh;
@@ -137,7 +140,7 @@ img {
 
 .col-5 {
   height: auto;
-  max-height: 60vh;
+  max-height: 40vh;
   display:flex;
   align-items: center;
   justify-content: center;
@@ -347,7 +350,7 @@ input [type=submit] {
   color: white;
   display: flex;
   align-items: center;
-  height: 100%;
+//  height: 100%;
 }
 
 .second {
@@ -374,14 +377,6 @@ p {
           font-size: 1.5em;
 }
 
-@media only screen and (max-width: 768px) {
-
-  .col-5 {
-    background-color: rgb(165, 238, 36);
-    border: 3px solid green;
-
-  }
-}
 
 }
 .col-1 {
@@ -496,7 +491,7 @@ label.checkbox.inline .toggle {
 }
 
 .toggle {
-	min-width: 40px;
+	min-width:40px;
 	height: 20px;
 	position: relative;
 	overflow: hidden;
@@ -597,11 +592,34 @@ label.checkbox.inline .toggle {
 @media screen and (max-width: 500px) {
   html { font-size: 0.75em; }
   .container {
-    width: 80%;
-    max-width: 80vw;
+    width: 100%;
+    max-width: 100vw;
     height: 100vh;
     margin: 0 auto;
     //background-color: rgba(0, 111, 173, 0.5);
     background-color: rgba(0, 0, 0, 0.1)
+  }
+  img {
+      width: auto;
+      max-width: 30%;
+      max-height: 30vh;
+  }
+  .toggle {
+  	min-width: 5vw;
+  	height: 5vh;
+  	position: relative;
+  	overflow: hidden;
+  }
+  .toggle.off .toggle-group {
+  	left: -100%;
+  }
+  .col-5 {
+    height: auto;
+    max-height: 40vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    left: 140px;
   }
 }
