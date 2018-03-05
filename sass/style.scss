@@ -73,7 +73,7 @@ table {
 img {
     width: auto;
     max-width: 60%;
-    max-height: 30vh;
+    max-height: 20vh;
 }
 
 
@@ -243,12 +243,13 @@ input [type=submit] {
     text-decoration: none;
 
 &:hover {
-    background: #751fab;
-    background-image: -webkit-linear-gradient(top, #751fab, #3498db);
-    background-image: -moz-linear-gradient(top, #751fab, #3498db);
-    background-image: -ms-linear-gradient(top, #751fab, #3498db);
-    background-image: -o-linear-gradient(top, #751fab, #3498db);
-    background-image: linear-gradient(to bottom, #751fab, #3498db);
+    //background: #751fab;
+    background: #005999;
+    //background-image: -webkit-linear-gradient(top, #751fab, #3498db);
+    //background-image: -moz-linear-gradient(top, #751fab, #3498db);
+    //background-image: -ms-linear-gradient(top, #751fab, #3498db);
+    //background-image: -o-linear-gradient(top, #751fab, #3498db);
+    //background-image: linear-gradient(to bottom, #751fab, #3498db);
     text-decoration: none;
   }
 
