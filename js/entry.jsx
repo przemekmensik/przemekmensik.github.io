@@ -115,11 +115,11 @@ class WeatherApp extends React.Component {
            animationName: holeIn,
            animationDuration: '1s'
        }
-     
+
      });
    }.bind(this)).catch(function(error) {
      this.setState({
-       errorMsg: 'Proszę wpisać miasto i województwo.'
+       errorMsg: alert("Proszę wpisać miasto!"),
      });
    }.bind(this));
  }
@@ -181,7 +181,7 @@ class WeatherApp extends React.Component {
               </div>
             </div>
                 <div className="col-5 content">
-                  <p>Kliknij by <br></br>zmienić</p>
+                  <p>Zmień </p>
                   <Toggle
                           onClick={this.onToggle}
                           on={<div className="col-4 col-md-4"><h1 className="big-font">{this.state.tempC}<span className="units">&deg; C</span></h1></div>}
