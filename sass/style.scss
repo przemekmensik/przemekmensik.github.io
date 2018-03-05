@@ -542,14 +542,14 @@ label.checkbox.inline .toggle {
 
 
 @media screen and (max-width: 500px) {
-  html { font-size: 0.65em; }
   .container {
     width: 100%;
     max-width: 100vw;
     height: 100vh;
     margin: 0 auto;
     //background-color: rgba(0, 111, 173, 0.5);
-    background-color: rgba(0, 0, 0, 0.1)
+    background-color: rgba(0, 0, 0, 0.1);
+    font-size: 0.75em;
   }
   img {
       width: auto;
