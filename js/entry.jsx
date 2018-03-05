@@ -3,17 +3,52 @@ import ReactDOM from 'react-dom';
 import '../css/style.css';
 import SubmitForm from './submitForm.jsx';
 import UnitSwitch from './unitButton.jsx';
-import AppDetails from './AppDetails.jsx';
+//import Example2 from './WeatherAnimation.jsx';
 import DailyForecast from './AppDetails1.jsx';
 import SecondForecast from './SecondForecast.jsx'
 import ThirdForecast from './ThirdForecast.jsx';
 import api from '../api.json';
 import 'whatwg-fetch';
 import Toggle from 'react-bootstrap-toggle';
+import ReactTransitions from 'react-transitions';
+import AppDetails from './AppDetails.jsx';
+import { StyleSheet, css } from 'aphrodite';
+import { holeIn } from 'react-magic';
+import { spaceInLeft } from 'react-magic';
+import { spaceInDown } from 'react-magic';
+import { spaceInRight } from 'react-magic';
 
 
 
 
+
+const styles = StyleSheet.create({
+    magic: {
+        animationName: holeIn,
+        animationDuration: '1s'
+    }
+});
+
+const styles2 = StyleSheet.create({
+    magic: {
+        animationName: spaceInLeft,
+        animationDuration: '2s'
+    }
+});
+
+const styles3 = StyleSheet.create({
+    magic: {
+        animationName: spaceInDown,
+        animationDuration: '2s'
+    }
+});
+
+const styles4 = StyleSheet.create({
+    magic: {
+        animationName: spaceInRight,
+        animationDuration: '2s'
+    }
+})
 
 class WeatherApp extends React.Component {
   constructor(props) {
@@ -25,6 +60,10 @@ class WeatherApp extends React.Component {
       inputValue: '',
       unitValue: 'C',
       toggleActive: false,
+      magic: {
+          animationName: holeIn,
+          animationDuration: '1s'
+      }
     }
     this.getData = this.getData.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -72,6 +111,11 @@ class WeatherApp extends React.Component {
        thirdDayforecastMonth: data.forecast.simpleforecast.forecastday[3].date.month,
        thirdDayforecastYear: data.forecast.simpleforecast.forecastday[3].date.year,
        errorMsg: '',
+       magic: {
+           animationName: holeIn,
+           animationDuration: '1s'
+       }
+     
      });
    }.bind(this)).catch(function(error) {
      this.setState({
@@ -91,7 +135,12 @@ class WeatherApp extends React.Component {
   }
   handleChange(e) {
     this.setState({
-      inputValue: e.target.value
+      inputValue: e.target.value,
+      magic: {
+          animationName: holeIn,
+          animationDuration: '2s'
+      }
+
     });
   }
 
@@ -114,6 +163,8 @@ class WeatherApp extends React.Component {
     this.setState({ toggleActive: !this.state.toggleActive });
   }
 
+
+
   render() {
     return (
         <div>
@@ -130,7 +181,7 @@ class WeatherApp extends React.Component {
               </div>
             </div>
                 <div className="col-5 content">
-                  <p>Kliknij by <br></br>zmnienić</p>
+                  <p>Kliknij by <br></br>zmienić</p>
                   <Toggle
                           onClick={this.onToggle}
                           on={<div className="col-4 col-md-4"><h1 className="big-font">{this.state.tempC}<span className="units">&deg; C</span></h1></div>}
@@ -139,8 +190,12 @@ class WeatherApp extends React.Component {
                           offstyle="danger"
                           active={this.state.toggleActive}
                         />
-                  <AppDetails {...this.state} />
+                <div className={css(styles.magic)}>
+                  <AppDetails  {...this.state}/>
+                  {/*<AppDetails {...this.state} />*/}
                 </div>
+                </div>
+
             </div>
 
             <div className="row">
@@ -150,13 +205,19 @@ class WeatherApp extends React.Component {
                     <div className="row">
                       <div className="col-2">
                         <div className="firstDay">
-                          <DailyForecast {...this.state }/>
+                          <div className={css(styles2.magic)}>
+                            <DailyForecast {...this.state }/>
+                          </div>
                             </div>
                               <div className="secondDay">
+                                <div className={css(styles3.magic)}>
                                 <SecondForecast {...this.state }/>
                               </div>
+                              </div>
                             <div className="thirdDay">
+                              <div className={css(styles4.magic)}>
                               <ThirdForecast {...this.state} />
+                            </div>
                         </div>
                       </div>
                     </div>
@@ -176,6 +237,9 @@ class WeatherApp extends React.Component {
     )
   }
 }
+
+
+
 
 class App extends React.Component {
   render() {

@@ -1,4 +1,6 @@
 @import "partials/_variables.scss";
+@import "partials/_animations";
+//@import "react-transitions/dist/animations.scss";
 
 
 
@@ -6,7 +8,7 @@
 
 html { font-size: 1em;
   body { height: 100%;
-       }
+
      }
 body {
   background-repeat:no-repeat;
@@ -98,7 +100,9 @@ img {
   background-color: rgba(0, 0, 0, 0.1)
 }
 .WUlogo {
+  padding-top: 70px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 5vh;
@@ -570,4 +574,4 @@ label.checkbox.inline .toggle {
     flex-direction: column;
     left: 140px;
   }
-}
+}}
